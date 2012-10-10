@@ -1,0 +1,156 @@
+/*--------------------*/
+/* cornell box styles */
+/*--------------------*/
+
+/*---------------- reset -----------------*/
+* {
+	box-sizing: border-box;
+}
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,
+p,img,strong,ol,ul,li,form,label,article,aside,
+canvas,footer,header,hgroup,menu,nav,section {
+  border: 0;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+/*-------------- end reset ---------------*/
+
+/*--------------- global -----------------*/
+
+html {
+	overflow-y: scroll;
+}
+
+body{
+	background: #eee;
+	margin: 0 auto;
+	width: 600px;
+}
+
+.box {
+	overflow: hidden;
+	-webkit-perspective: 300;
+		 -mox-perspective: 300;
+			-ms-perspective: 300;
+			 -o-perspective: 300;
+					perspective: 300;
+}
+
+.column {
+	float: left;
+}
+
+.side {
+	position: relative;
+		top: 200px;
+}
+
+.wall {
+	height: 200px;
+	overflow: hidden;
+	width: 200px;
+}
+
+.left {
+	background: #c00;
+	background: -webkit-gradient( linear, left top, right top, from(#c00), to(#900) );
+	background:		 -moz-gradient( linear, left top, right top, from(#c00), to(#900) );
+	background:			-ms-gradient( linear, left top, right top, from(#c00), to(#900) );
+	background:			 -o-gradient( linear, left top, right top, from(#c00), to(#900) );
+	background:					gradient( linear, left top, right top, from(#c00), to(#900) );
+	border-left: 10px solid #EBD9B4;
+	-webkit-transform: rotateY(90deg) translateZ(100px);
+		 -moz-transform: rotateY(90deg) translateZ(100px);
+			-ms-transform: rotateY(90deg) translateZ(100px);
+			 -o-transform: rotateY(90deg) translateZ(100px);
+					transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+	background: -webkit-gradient( linear, 0% 0%, 0% 100%, from(#fff), to(#999) );
+	background:		 -moz-gradient( linear, 0% 0%, 0% 100%, from(#fff), to(#999) );
+	background:			-ms-gradient( linear, 0% 0%, 0% 100%, from(#fff), to(#999) );
+	background:			 -o-gradient( linear, 0% 0%, 0% 100%, from(#fff), to(#999) );
+	background:					gradient( linear, 0% 0%, 0% 100%, from(#fff), to(#999) );
+	border-top: 10px solid #EBD9B4;
+	-webkit-transform: rotateX(-90deg) translateZ(100px);
+		 -moz-transform: rotateX(-90deg) translateZ(100px);
+			-ms-transform: rotateX(-90deg) translateZ(100px);
+			 -o-transform: rotateX(-90deg) translateZ(100px);
+					transform: rotateX(-90deg) translateZ(100px);
+}
+
+.back {
+	background: #999;
+	-webkit-transform: rotateX(-180deg) translateZ(100px);
+		 -moz-transform: rotateX(-180deg) translateZ(100px);
+			-ms-transform: rotateX(-180deg) translateZ(100px);
+			 -o-transform: rotateX(-180deg) translateZ(100px);
+					transform: rotateX(-180deg) translateZ(100px);
+}
+
+.bottom {
+	background: -webkit-gradient( linear, 0% 0%, 0% 100%, from(#999), to(#fff) );
+	background:		 -moz-gradient( linear, 0% 0%, 0% 100%, from(#999), to(#fff) );
+	background:			-ms-gradient( linear, 0% 0%, 0% 100%, from(#999), to(#fff) );
+	background:			 -o-gradient( linear, 0% 0%, 0% 100%, from(#999), to(#fff) );
+	background:					gradient( linear, 0% 0%, 0% 100%, from(#999), to(#fff) );
+	border-bottom: 10px solid #EBD9B4;
+	-webkit-transform: rotateX(90deg) translateZ(100px);
+		 -moz-transform: rotateX(90deg) translateZ(100px);
+			-ms-transform: rotateX(90deg) translateZ(100px);
+			 -o-transform: rotateX(90deg) translateZ(100px);
+					transform: rotateX(90deg) translateZ(100px);
+}
+
+.right {
+	background: #09c;
+	background: -webkit-gradient( linear, left top, right top, from(#007399), to(#09c) );
+	background:		 -moz-gradient( linear, left top, right top, from(#007399), to(#09c) );
+	background:			-ms-gradient( linear, left top, right top, from(#007399), to(#09c) );
+	background:			 -o-gradient( linear, left top, right top, from(#007399), to(#09c) );
+	background:					gradient( linear, left top, right top, from(#007399), to(#09c) );
+	border-right: 10px solid #EBD9B4;
+	-webkit-transform: rotateY(-90deg) translateZ(100px);
+		 -moz-transform: rotateY(-90deg) translateZ(100px);
+			-ms-transform: rotateY(-90deg) translateZ(100px);
+			 -o-transform: rotateY(-90deg) translateZ(100px);
+					transform: rotateY(-90deg) translateZ(100px);
+}
+
+.ball {
+	background: -webkit-gradient( radial, 54% 57%, 0, 78% 50%, 86, from(#999), to(#000) );
+	background:		 -moz-gradient( radial, 54% 57%, 0, 78% 50%, 86, from(#999), to(#000) );
+	background:			-ms-gradient( radial, 54% 57%, 0, 78% 50%, 86, from(#999), to(#000) );
+	background:			 -o-gradient( radial, 54% 57%, 0, 78% 50%, 86, from(#999), to(#000) );
+	background:					gradient( radial, 54% 57%, 0, 78% 50%, 86, from(#999), to(#000) );
+	border-radius: 50px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+		left: 6px;
+		top: -296px;
+	width: 100px;
+}
+	.ball::after {
+		background: #868686;
+		border-radius: 20px;
+		box-shadow: 0px 0px 10px #868686;
+		content: '';
+		height: 30px;
+		position: absolute;
+			left: -29px;
+			top: 5px;
+		width: 30px;
+}
+
+			/*------------- end global ---------------*/
